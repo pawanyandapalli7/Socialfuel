@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Social Fuel helps early-stage Instagram and YouTube creators break through low reach with strategic content promotion."/>
+  <title>Social Fuel — Creator Growth Agency</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <style>body{font-family:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif}</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="index.html">Social<span>Fuel</span></a>
+  <ul class="nav-links">
+    <li><a onclick="go('how')">How it works</a></li>
+    <li><a onclick="go('packages')">Packages</a></li>
+    <li><a href="audit.html">Free audit</a></li>
+    <li><a onclick="go('faq')">FAQ</a></li>
+  </ul>
+  <div class="nav-right">
+    <a class="btn-gold nav-cta" href="packages.html">Get started</a>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <a onclick="go('how');closeMenu()">How it works</a>
+  <a href="packages.html">Packages</a>
+  <a href="audit.html">Free audit</a>
+  <a onclick="go('faq');closeMenu()">FAQ</a>
+  <a href="packages.html">Get started →</a>
+</div>
+
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-ring ring-1"></div>
+  <div class="hero-ring ring-2"></div>
+  <div class="hero-content">
+    <div class="tag">Creator growth agency</div>
+    <h1 class="h1">Your content<br>deserves to<br>be <em>seen.</em></h1>
+    <p class="sub">We help early-stage Instagram and YouTube creators break through low reach — with strategic content promotion and a real growth system built for the beginning.</p>
+    <div class="hero-btns">
+      <a class="btn-gold" href="packages.html">Choose your package →</a>
+      <button class="btn-outline" onclick="go('how')">See how it works</button>
+    </div>
+    <p class="hero-fine">No passwords required &nbsp;·&nbsp; Secure payment via Stripe &nbsp;·&nbsp; Results depend on content &amp; consistency</p>
+  </div>
+</section>
+<div class="sep"></div>
+
+<section id="problem">
+  <div class="tag fade-up">The problem</div>
+  <h2 class="h2 fade-up">The stage no one<br>talks <em>about</em></h2>
+  <div class="prob-grid fade-up">
+    <div class="prob-left">
+      <p>You post consistently. You try different formats. You improve your content. <strong>But nothing moves.</strong></p>
+      <p>No reach. No engagement. No growth. And slowly, the doubt creeps in.</p>
+      <div class="prob-quotes">
+        <p>"Is my content not good enough?"</p>
+        <p>"Do I need better equipment?"</p>
+        <p>"Am I wasting my time?"</p>
+      </div>
+    </div>
+    <div class="prob-right">
+      <div class="prob-truth">Most creators don't fail because of <em>bad content.</em></div>
+      <p>They fail because their content is never seen. In the early stage, even excellent content goes unnoticed — platforms don't automatically surface new creators.</p>
+      <p>That's not a content problem. It's a visibility problem. And that's exactly where we come in.</p>
+    </div>
+  </div>
+</section>
+<div class="sep"></div>
+
+<section id="how">
+  <div class="tag fade-up">The process</div>
+  <h2 class="h2 fade-up">How we help<br>you <em>grow</em></h2>
+  <div class="steps-grid fade-up">
+    <div class="step"><div class="step-num">01</div><h3>Choose your package</h3><p>Pick the tier that fits where you are. No lock-in, no contracts. Pay securely via Stripe.</p></div>
+    <div class="step"><div class="step-num">02</div><h3>Complete onboarding</h3><p>A 5-minute form about your content and goals. No passwords required — ever.</p></div>
+    <div class="step"><div class="step-num">03</div><h3>We start work</h3><p>Within 24–72 hours your growth phase begins. You'll be notified the moment we start.</p></div>
+    <div class="step"><div class="step-num">04</div><h3>Momentum builds</h3><p>Your content reaches more people. You receive strategy guidance and a completion summary.</p></div>
+  </div>
+</section>
+<div class="sep"></div>
+
+<section id="who">
+  <div class="tag fade-up">Who this is for</div>
+  <h2 class="h2 fade-up">Built for creators at<br>the <em>beginning</em></h2>
+  <div class="who-grid fade-up">
+    <div class="who-card"><div class="who-icon">✦</div><h3>New creators</h3><p>Under 5K followers. Posting consistently but getting no traction. You need that first push to get your content seen by the right people.</p></div>
+    <div class="who-card"><div class="who-icon">◈</div><h3>Stuck creators</h3><p>Growth has plateaued around 5K–30K. You know the content is good — you just need the visibility to prove it to the algorithm.</p></div>
+    <div class="who-card"><div class="who-icon">◇</div><h3>Serious creators</h3><p>Committed to building a real presence. Not looking for shortcuts — you want a strategic foundation for long-term growth.</p></div>
+  </div>
+</section>
+<div class="sep"></div>
+
+<section id="packages">
+  <div class="tag fade-up">Investment</div>
+  <h2 class="h2 fade-up">Our <em>packages</em></h2>
+  <div class="platform-tabs fade-up">
+    <button class="ptab active" onclick="setPlatform('ig',this)">Instagram</button>
+    <button class="ptab" onclick="setPlatform('yt',this)">YouTube</button>
+  </div>
+  <div id="ig-grid" class="pkg-grid fade-up">
+    <div class="pkg-card"><div class="pkg-tier">Spark</div><div class="pkg-name">Kickstart</div><div class="pkg-who">For new creators starting from scratch</div><div class="pkg-price">$79</div><div class="pkg-orig">was $129 — launch offer</div><div class="pkg-divider"></div><ul class="pkg-features"><li>Strategic reel promotion push</li><li>Reel visibility campaign</li><li>Engagement signal support</li><li>Profile setup guidance</li><li>Delivered within 7 days</li></ul><button class="pkg-cta" onclick="openOnboarding('Instagram — Spark ($79)')">Get started</button></div>
+    <div class="pkg-card popular"><div class="pkg-badge">Most popular</div><div class="pkg-tier">Ignite</div><div class="pkg-name">Accelerate</div><div class="pkg-who">For creators ready to move past basics</div><div class="pkg-price">$199</div><div class="pkg-orig">&nbsp;</div><div class="pkg-divider"></div><ul class="pkg-features"><li>Multi-reel promotion system</li><li>Advanced engagement layering</li><li>Bio + profile optimization tips</li><li>7 viral content frameworks</li><li>Delivered within 10 days</li></ul><button class="pkg-cta" onclick="openOnboarding('Instagram — Ignite ($199)')">Get started</button></div>
+    <div class="pkg-card"><div class="pkg-tier">Momentum</div><div class="pkg-name">Consistent</div><div class="pkg-who">For creators serious about steady growth</div><div class="pkg-price">$399</div><div class="pkg-orig">&nbsp;</div><div class="pkg-divider"></div><ul class="pkg-features"><li>Sustained promotion campaign</li><li>Full profile positioning audit</li><li>14-day content strategy plan</li><li>Niche targeting direction</li><li>10 viral hook templates</li><li>Delivered within 14 days</li></ul><button class="pkg-cta" onclick="openOnboarding('Instagram — Momentum ($399)')">Get started</button></div>
+    <div class="pkg-card"><div class="pkg-tier">Influence</div><div class="pkg-name">Brand ready</div><div class="pkg-who">For creators building a personal brand</div><div class="pkg-price">$799</div><div class="pkg-orig">&nbsp;</div><div class="pkg-divider"></div><ul class="pkg-features"><li>Long-term promotion system</li><li>Full profile audit + overhaul</li><li>Content pillar framework</li><li>30-day strategy plan</li><li>1-on-1 strategy call (30 min)</li><li>Brand deal starter guide</li><li>Delivered within 21 days</li></ul><button class="pkg-cta" onclick="openOnboarding('Instagram — Influence ($799)')">Get started</button></div>
+  </div>
+  <div id="yt-grid" class="pkg-grid yt fade-up" style="display:none">
+    <div class="pkg-card"><div class="pkg-tier">YT Spark</div><div class="pkg-name">Foundation</div><div class="pkg-who">Build your first real audience</div><div class="pkg-price">$399</div><div class="pkg-orig">&nbsp;</div><div class="pkg-divider"></div><ul class="pkg-features"><li>Channel promotion activation</li><li>Initial video visibility push</li><li>Watch-time signal support</li><li>Channel structure guidance</li><li>First 5–7 video content ideas</li><li>Delivered within 14 days</li></ul><button class="pkg-cta" onclick="openOnboarding('YouTube — Spark ($399)')">Get started</button></div>
+    <div class="pkg-card popular"><div class="pkg-badge">Most popular</div><div class="pkg-tier">YT Momentum</div><div class="pkg-name">Accelerate</div><div class="pkg-who">Turn content into consistent growth</div><div class="pkg-price">$799</div><div class="pkg-orig">&nbsp;</div><div class="pkg-divider"></div><ul class="pkg-features"><li>Sustained channel promotion</li><li>Watch-time optimization strategy</li><li>Titles, thumbnails &amp; hook guide</li><li>14-day content strategy plan</li><li>Niche direction coaching</li><li>Delivered within 21 days</li></ul><button class="pkg-cta" onclick="openOnboarding('YouTube — Momentum ($799)')">Get started</button></div>
+    <div class="pkg-card"><div class="pkg-tier">YT Authority</div><div class="pkg-name">Scale</div><div class="pkg-who">Build a channel with real authority</div><div class="pkg-price">$1,299</div><div class="pkg-orig">&nbsp;</div><div class="pkg-divider"></div><ul class="pkg-features"><li>Advanced channel promotion</li><li>Retention strategy system</li><li>30-day content strategy plan</li><li>Viral content framework</li><li>1-on-1 strategy call (45 min)</li><li>Priority support throughout</li><li>Delivered within 30 days</li></ul><button class="pkg-cta" onclick="openOnboarding('YouTube — Authority ($1,299)')">Get started</button></div>
+  </div>
+  <div class="pkg-disclaimer fade-up"><strong>Important:</strong> Results depend on content quality, posting consistency, niche, and platform behavior. We do not guarantee specific follower counts, view numbers, or engagement rates. Outcomes vary by account.</div>
+</section>
+<div class="sep"></div>
+
+<section id="after">
+  <div class="tag fade-up">After you pay</div>
+  <h2 class="h2 fade-up">Here's exactly <em>what happens</em> next</h2>
+  <div class="after-grid fade-up">
+    <div class="after-step"><div class="after-num">1</div><div><h3>Secure payment via Stripe</h3><p>Pay safely through Stripe. An instant confirmation email with your next steps arrives immediately after checkout.</p></div></div>
+    <div class="after-step"><div class="after-num">2</div><div><h3>Complete onboarding form</h3><p>A short 3–5 minute form about your content and goals. No passwords required — ever.</p></div></div>
+    <div class="after-step"><div class="after-num">3</div><div><h3>We begin within 24–72 hours</h3><p>Your growth phase starts. Early signals in reach and visibility may appear within the first few days.</p></div></div>
+    <div class="after-step"><div class="after-num">4</div><div><h3>Completion summary sent</h3><p>When your package is complete you receive a full wrap-up with what was done and how to maintain momentum.</p></div></div>
+  </div>
+</section>
+<div class="sep"></div>
+
+<section id="audit">
+  <div class="tag fade-up">Free offer</div>
+  <h2 class="h2 fade-up">Not sure where to start?<br>Get a <em>free audit.</em></h2>
+  <div class="audit-box fade-up">
+    <div class="audit-left">
+      <p>We'll review your Instagram or YouTube profile and send you a short, personalized breakdown — what's working, what's not, and your single biggest opportunity right now.</p>
+      <p style="font-style:italic;font-size:14px;margin-bottom:0">No pitch. No pressure. Just real feedback.</p>
+      <div class="audit-badges" style="margin-top:22px">
+        <div class="audit-badge">Delivered within 48 hours</div>
+        <div class="audit-badge">No purchase required</div>
+        <div class="audit-badge">We never ask for your password</div>
+      </div>
+    </div>
+    <div>
+      <div id="audit-form-wrap" class="audit-form">
+        <div class="form-field"><label>Full name</label><input type="text" id="audit-name" placeholder="Your name"/></div>
+        <div class="form-field"><label>Email address</label><input type="email" id="audit-email" placeholder="you@email.com"/></div>
+        <div class="form-field"><label>Username / profile link</label><input type="text" id="audit-user" placeholder="@handle or profile URL"/></div>
+        <div class="form-field"><label>Platform</label><select id="audit-platform"><option value="">Select platform</option><option>Instagram</option><option>YouTube</option></select></div>
+        <button class="form-submit" onclick="submitAudit()">Send my free audit →</button>
+        <p class="form-note">Free — no purchase required &nbsp;·&nbsp; We review within 48 hours</p>
+        <p class="form-safe">🔒 We never require your password or login access</p>
+      </div>
+      <div id="audit-thanks" class="thankyou" style="display:none">
+        <div class="thankyou-icon">✓</div>
+        <h3>You're on the list.</h3>
+        <p>We'll review your profile and send your audit within 48 hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="sep"></div>
+
+<section id="about">
+  <div class="tag fade-up">About Social Fuel</div>
+  <h2 class="h2 fade-up">We believe every creator<br>deserves a <em>fair start</em></h2>
+  <div class="about-grid">
+    <div class="about-left fade-up">
+      <p>Most creators don't fail because they lack talent. They fail because <strong>the early stage of growth is brutally unfair</strong> — platforms favor established accounts, and new creators get buried before they ever get a chance.</p>
+      <p>We built Social Fuel to change that — combining strategic content promotion with real creator support so your content reaches more people while you focus on what you do best: creating.</p>
+      <div class="belief-list">
+        <div class="belief"><div class="belief-dot"></div><p><strong>We don't believe in quick spikes.</strong> We focus on momentum that continues well beyond our service.</p></div>
+        <div class="belief"><div class="belief-dot"></div><p><strong>We never require your password.</strong> Your account security is non-negotiable, always.</p></div>
+        <div class="belief"><div class="belief-dot"></div><p><strong>We're honest about results.</strong> Growth depends on your content and consistency — we support the process, not replace it.</p></div>
+      </div>
+    </div>
+    <div class="about-card fade-up">
+      <h3>What we stand for</h3>
+      <div class="stat-grid">
+        <div><div class="stat-val">Safe</div><div class="stat-label">No password access</div></div>
+        <div><div class="stat-val">Real</div><div class="stat-label">Strategy-based</div></div>
+        <div><div class="stat-val">24–72h</div><div class="stat-label">Start time</div></div>
+        <div><div class="stat-val">IG+YT</div><div class="stat-label">Both platforms</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="sep"></div>
+
+<section id="faq">
+  <div class="tag fade-up">Questions</div>
+  <h2 class="h2 fade-up">Frequently <em>asked</em></h2>
+  <div class="faq-grid fade-up">
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">What exactly do you do? <span class="faq-arrow">+</span></div><div class="faq-a">We help creators get strategic visibility in the early stage. Through content promotion, positioning support, and growth systems — your content reaches more people so real momentum can build.</div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Do you guarantee followers or views? <span class="faq-arrow">+</span></div><div class="faq-a">No — and be cautious of any service that does. Growth depends on your content, consistency, and niche. We support the process with strategy and promotion. Results vary by account.</div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Is this safe for my account? <span class="faq-arrow">+</span></div><div class="faq-a">We never require your password or login credentials. We use external strategic promotion methods only. Platforms operate independently — we cannot control their internal systems or policy changes.</div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">How long until I see results? <span class="faq-arrow">+</span></div><div class="faq-a">Services begin within 24–72 hours of your onboarding form submission. Early signals may appear within the first few days. Real momentum builds over the full duration of your package.</div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Do I need to keep posting during the service? <span class="faq-arrow">+</span></div><div class="faq-a">Yes — this is critical. Promotion works best when there's fresh content to push. The more consistently you post during your growth phase, the better your results will be.</div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">What is your refund policy? <span class="faq-arrow">+</span></div><div class="faq-a">All payments are final once services have been initiated. If you experience a genuine service issue, contact us within 7 days of package completion and we'll review your case directly.</div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">What makes you different? <span class="faq-arrow">+</span></div><div class="faq-a">Most services sell numbers. We focus on building creators — with strategy, content direction, and visibility systems designed for long-term growth, not a spike that fades in 48 hours.</div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Who is this best suited for? <span class="faq-arrow">+</span></div><div class="faq-a">Beginner creators (0–50K followers) on Instagram or YouTube who are serious about growing — not those looking for overnight fame or inflated metrics.</div></div>
+  </div>
+</section>
+<div class="sep"></div>
+
+<section id="cta">
+  <div class="scarcity-badge"><span class="pulse-dot"></span>Accepting new creators — limited spots per week</div>
+  <h2 class="cta-h2">This is where your content starts getting <em>seen.</em></h2>
+  <div class="cta-sub">If you've been stuck and waiting for things to change — this is your next step.</div>
+  <div class="cta-btns">
+    <a class="btn-gold" href="packages.html">View packages</a>
+    <a class="btn-outline" href="audit.html">Get free audit</a>
+  </div>
+  <div class="cta-fine">No passwords required &nbsp;·&nbsp; Secure checkout via Stripe &nbsp;·&nbsp; Results depend on your content and consistency</div>
+  <div class="cta-risk">Service issue? Contact us within 7 days of completion — we'll review it directly.</div>
+</section>
+
+<footer>
+  <div class="footer-row">
+    <a class="footer-logo" href="index.html">Social<span>Fuel</span></a>
+    <div class="footer-links">
+      <a href="packages.html">Packages</a>
+      <a href="audit.html">Free audit</a>
+      <a onclick="openLegal('terms')">Terms &amp; conditions</a>
+      <a onclick="openLegal('privacy')">Privacy policy</a>
+      <a onclick="openLegal('contact')">Contact</a>
+    </div>
+  </div>
+  <small>© 2024 Social Fuel. All rights reserved. Results vary by account. We do not guarantee specific growth outcomes.</small>
+</footer>
+
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <h2 id="modal-title"></h2>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

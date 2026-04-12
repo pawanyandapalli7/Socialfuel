@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Choose your Social Fuel growth package. Instagram and YouTube creator growth plans starting at $79." />
+  <title>Packages — Social Fuel</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif; }
+    .page-hero { padding: 80px 40px 60px; background: var(--bg); }
+    .page-hero .tag { margin-bottom: 12px; }
+    .page-hero p { color: var(--gr); font-size: 16px; max-width: 520px; margin-top: 14px; line-height: 1.8; }
+    .compare-row { display: grid; grid-template-columns: 200px 1fr 1fr 1fr 1fr; gap: 0; background: var(--bdr); border: 1px solid var(--bdr); margin-top: 20px; }
+    .compare-row.yt-row { grid-template-columns: 200px 1fr 1fr 1fr; }
+    .compare-cell { background: var(--bg3); padding: 14px 16px; font-size: 12px; color: var(--gr); border-bottom: 1px solid var(--bdr); transition: background 0.35s, color 0.35s; }
+    .compare-cell.head { font-weight: 700; color: var(--w); background: var(--bg4); font-size: 13px; }
+    .compare-cell.label { color: var(--w); font-weight: 500; background: var(--bg2); }
+    .compare-cell.check { text-align: center; color: var(--gold); font-size: 16px; }
+    .compare-cell.dash { text-align: center; color: var(--mut); }
+    @media(max-width:768px){
+      .page-hero { padding: 56px 18px 40px; }
+      .compare-row, .compare-row.yt-row { display: none; }
+    }
+  </style>
+</head>
+<body class="dk">
+
+<nav>
+  <a class="logo" href="index.html">Social<span>Fuel</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html#how">How it works</a></li>
+    <li><a href="packages.html">Packages</a></li>
+    <li><a href="audit.html">Free audit</a></li>
+    <li><a href="index.html#faq">FAQ</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="toggle" onclick="SF.toggleTheme()" title="Toggle theme" aria-label="Toggle theme">
+      <div class="toggle-knob" id="toggle-knob">🌙</div>
+    </button>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-nav" id="mobile-nav">
+  <a href="index.html#how">How it works</a>
+  <a href="packages.html">Packages</a>
+  <a href="audit.html">Free audit</a>
+  <a href="index.html#faq">FAQ</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="tag">Investment</div>
+  <h1 class="h1">Our <em>packages</em></h1>
+  <p>Designed for creators at every stage of the early journey. Pick the tier that matches where you are — and where you want to go.</p>
+</div>
+
+<div class="sep"></div>
+
+<!-- PACKAGES -->
+<section id="packages" style="padding-top:40px">
+  <div class="platform-tabs fade-up">
+    <button class="ptab active" onclick="setPlatform('ig', this)">Instagram</button>
+    <button class="ptab" onclick="setPlatform('yt', this)">YouTube</button>
+  </div>
+
+  <!-- INSTAGRAM -->
+  <div id="ig-grid" class="pkg-grid fade-up">
+    <div class="pkg-card">
+      <div class="pkg-tier">Spark</div>
+      <div class="pkg-name">Kickstart</div>
+      <div class="pkg-who">For new creators starting from scratch</div>
+      <div class="pkg-price">$79</div>
+      <div class="pkg-orig">was $129 — launch offer</div>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        <li>Strategic reel promotion push</li>
+        <li>Reel visibility campaign</li>
+        <li>Engagement signal support</li>
+        <li>Profile setup guidance</li>
+        <li>Delivered within 7 days</li>
+      </ul>
+      <button class="pkg-cta" onclick="openOnboarding('Instagram — Spark ($79)')">Get started</button>
+    </div>
+
+    <div class="pkg-card popular">
+      <div class="pkg-badge">Most popular</div>
+      <div class="pkg-tier">Ignite</div>
+      <div class="pkg-name">Accelerate</div>
+      <div class="pkg-who">For creators ready to move past basics</div>
+      <div class="pkg-price">$199</div>
+      <div class="pkg-orig">&nbsp;</div>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        <li>Multi-reel promotion system</li>
+        <li>Advanced engagement layering</li>
+        <li>Bio + profile optimization tips</li>
+        <li>7 viral content frameworks</li>
+        <li>Delivered within 10 days</li>
+      </ul>
+      <button class="pkg-cta" onclick="openOnboarding('Instagram — Ignite ($199)')">Get started</button>
+    </div>
+
+    <div class="pkg-card">
+      <div class="pkg-tier">Momentum</div>
+      <div class="pkg-name">Consistent</div>
+      <div class="pkg-who">For creators serious about steady growth</div>
+      <div class="pkg-price">$399</div>
+      <div class="pkg-orig">&nbsp;</div>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        <li>Sustained promotion campaign</li>
+        <li>Full profile positioning audit</li>
+        <li>14-day content strategy plan</li>
+        <li>Niche targeting direction</li>
+        <li>10 viral hook templates</li>
+        <li>Delivered within 14 days</li>
+      </ul>
+      <button class="pkg-cta" onclick="openOnboarding('Instagram — Momentum ($399)')">Get started</button>
+    </div>
+
+    <div class="pkg-card">
+      <div class="pkg-tier">Influence</div>
+      <div class="pkg-name">Brand ready</div>
+      <div class="pkg-who">For creators building a personal brand</div>
+      <div class="pkg-price">$799</div>
+      <div class="pkg-orig">&nbsp;</div>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        <li>Long-term promotion system</li>
+        <li>Full profile audit + overhaul</li>
+        <li>Content pillar framework</li>
+        <li>30-day strategy plan</li>
+        <li>1-on-1 strategy call (30 min)</li>
+        <li>Brand deal starter guide</li>
+        <li>Delivered within 21 days</li>
+      </ul>
+      <button class="pkg-cta" onclick="openOnboarding('Instagram — Influence ($799)')">Get started</button>
+    </div>
+  </div>
+
+  <!-- INSTAGRAM COMPARISON TABLE -->
+  <div id="ig-compare" style="margin-top:32px">
+    <p style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gr);margin-bottom:12px">Feature comparison</p>
+    <div class="compare-row">
+      <div class="compare-cell label">Feature</div>
+      <div class="compare-cell head">Spark</div>
+      <div class="compare-cell head">Ignite</div>
+      <div class="compare-cell head">Momentum</div>
+      <div class="compare-cell head">Influence</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell label">Reel promotion</div>
+      <div class="compare-cell check">✓</div><div class="compare-cell check">✓</div><div class="compare-cell check">✓</div><div class="compare-cell check">✓</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell label">Engagement signals</div>
+      <div class="compare-cell check">✓</div><div class="compare-cell check">✓</div><div class="compare-cell check">✓</div><div class="compare-cell check">✓</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell label">Profile optimization</div>
+      <div class="compare-cell dash">—</div><div class="compare-cell check">✓</div><div class="compare-cell check">✓</div><div class="compare-cell check">✓</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell label">Content strategy plan</div>
+      <div class="compare-cell dash">—</div><div class="compare-cell dash">—</div><div class="compare-cell check">14-day</div><div class="compare-cell check">30-day</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell label">Viral hook templates</div>
+      <div class="compare-cell dash">—</div><div class="compare-cell check">7</div><div class="compare-cell check">10</div><div class="compare-cell check">✓</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell label">1-on-1 strategy call</div>
+      <div class="compare-cell dash">—</div><div class="compare-cell dash">—</div><div class="compare-cell dash">—</div><div class="compare-cell check">30 min</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell label">Brand deal guide</div>
+      <div class="compare-cell dash">—</div><div class="compare-cell dash">—</div><div class="compare-cell dash">—</div><div class="compare-cell check">✓</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell label">Delivery time</div>
+      <div class="compare-cell">7 days</div><div class="compare-cell">10 days</div><div class="compare-cell">14 days</div><div class="compare-cell">21 days</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell label">Price</div>
+      <div class="compare-cell" style="color:var(--gold);font-weight:700">$79</div>
+      <div class="compare-cell" style="color:var(--gold);font-weight:700">$199</div>
+      <div class="compare-cell" style="color:var(--gold);font-weight:700">$399</div>
+      <div class="compare-cell" style="color:var(--gold);font-weight:700">$799</div>
+    </div>
+  </div>
+
+  <!-- YOUTUBE -->
+  <div id="yt-grid" class="pkg-grid yt fade-up" style="display:none">
+    <div class="pkg-card">
+      <div class="pkg-tier">YT Spark</div>
+      <div class="pkg-name">Foundation</div>
+      <div class="pkg-who">Build your first real audience</div>
+      <div class="pkg-price">$399</div>
+      <div class="pkg-orig">&nbsp;</div>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        <li>Channel promotion activation</li>
+        <li>Initial video visibility push</li>
+        <li>Watch-time signal support</li>
+        <li>Channel structure guidance</li>
+        <li>First 5–7 video content ideas</li>
+        <li>Delivered within 14 days</li>
+      </ul>
+      <button class="pkg-cta" onclick="openOnboarding('YouTube — Spark ($399)')">Get started</button>
+    </div>
+
+    <div class="pkg-card popular">
+      <div class="pkg-badge">Most popular</div>
+      <div class="pkg-tier">YT Momentum</div>
+      <div class="pkg-name">Accelerate</div>
+      <div class="pkg-who">Turn content into consistent growth</div>
+      <div class="pkg-price">$799</div>
+      <div class="pkg-orig">&nbsp;</div>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        <li>Sustained channel promotion</li>
+        <li>Watch-time optimization strategy</li>
+        <li>Titles, thumbnails &amp; hook guide</li>
+        <li>14-day content strategy plan</li>
+        <li>Niche direction coaching</li>
+        <li>Delivered within 21 days</li>
+      </ul>
+      <button class="pkg-cta" onclick="openOnboarding('YouTube — Momentum ($799)')">Get started</button>
+    </div>
+
+    <div class="pkg-card">
+      <div class="pkg-tier">YT Authority</div>
+      <div class="pkg-name">Scale</div>
+      <div class="pkg-who">Build a channel with real authority</div>
+      <div class="pkg-price">$1,299</div>
+      <div class="pkg-orig">&nbsp;</div>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        <li>Advanced channel promotion</li>
+        <li>Retention strategy system</li>
+        <li>30-day content strategy plan</li>
+        <li>Viral content framework</li>
+        <li>1-on-1 strategy call (45 min)</li>
+        <li>Priority support throughout</li>
+        <li>Delivered within 30 days</li>
+      </ul>
+      <button class="pkg-cta" onclick="openOnboarding('YouTube — Authority ($1,299)')">Get started</button>
+    </div>
+  </div>
+
+  <!-- YOUTUBE COMPARISON TABLE -->
+  <div id="yt-compare" style="margin-top:32px;display:none">
+    <p style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gr);margin-bottom:12px">Feature comparison</p>
+    <div class="compare-row yt-row">
+      <div class="compare-cell label">Feature</div>
+      <div class="compare-cell head">YT Spark</div>
+      <div class="compare-cell head">YT Momentum</div>
+      <div class="compare-cell head">YT Authority</div>
+    </div>
+    <div class="compare-row yt-row">
+      <div class="compare-cell label">Channel promotion</div>
+      <div class="compare-cell check">✓</div><div class="compare-cell check">✓</div><div class="compare-cell check">✓</div>
+    </div>
+    <div class="compare-row yt-row">
+      <div class="compare-cell label">Watch-time signals</div>
+      <div class="compare-cell check">✓</div><div class="compare-cell check">✓</div><div class="compare-cell check">✓</div>
+    </div>
+    <div class="compare-row yt-row">
+      <div class="compare-cell label">Content strategy plan</div>
+      <div class="compare-cell dash">—</div><div class="compare-cell check">14-day</div><div class="compare-cell check">30-day</div>
+    </div>
+    <div class="compare-row yt-row">
+      <div class="compare-cell label">Viral content framework</div>
+      <div class="compare-cell dash">—</div><div class="compare-cell dash">—</div><div class="compare-cell check">✓</div>
+    </div>
+    <div class="compare-row yt-row">
+      <div class="compare-cell label">1-on-1 strategy call</div>
+      <div class="compare-cell dash">—</div><div class="compare-cell dash">—</div><div class="compare-cell check">45 min</div>
+    </div>
+    <div class="compare-row yt-row">
+      <div class="compare-cell label">Priority support</div>
+      <div class="compare-cell dash">—</div><div class="compare-cell dash">—</div><div class="compare-cell check">✓</div>
+    </div>
+    <div class="compare-row yt-row">
+      <div class="compare-cell label">Delivery time</div>
+      <div class="compare-cell">14 days</div><div class="compare-cell">21 days</div><div class="compare-cell">30 days</div>
+    </div>
+    <div class="compare-row yt-row">
+      <div class="compare-cell label">Price</div>
+      <div class="compare-cell" style="color:var(--gold);font-weight:700">$399</div>
+      <div class="compare-cell" style="color:var(--gold);font-weight:700">$799</div>
+      <div class="compare-cell" style="color:var(--gold);font-weight:700">$1,299</div>
+    </div>
+  </div>
+
+  <div class="pkg-disclaimer fade-up" style="margin-top:28px">
+    <strong>Important:</strong> Results depend on content quality, posting consistency, niche, and platform behavior.
+    We do not guarantee specific follower counts, view numbers, or engagement rates. Outcomes vary by account.
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<section id="cta">
+  <div class="scarcity-badge"><span class="pulse-dot"></span>Accepting new creators — limited spots per week</div>
+  <h2 class="cta-h2">Not sure which plan?<br>Start with a <em>free audit.</em></h2>
+  <div class="cta-sub">We'll review your profile and tell you exactly which package makes sense for where you are right now.</div>
+  <div class="cta-btns">
+    <a class="btn-inverse" href="audit.html">Get free audit</a>
+  </div>
+  <div class="cta-fine">No purchase required &nbsp;·&nbsp; Delivered within 48 hours &nbsp;·&nbsp; No passwords needed</div>
+</section>
+
+<footer>
+  <div class="footer-row">
+    <a class="footer-logo" href="index.html">Social<span>Fuel</span></a>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="audit.html">Free audit</a>
+      <a onclick="openLegal('terms')">Terms &amp; conditions</a>
+      <a onclick="openLegal('privacy')">Privacy policy</a>
+      <a onclick="openLegal('contact')">Contact</a>
+    </div>
+  </div>
+  <small>© 2024 Social Fuel. All rights reserved. Results vary by account. We do not guarantee specific growth outcomes.</small>
+</footer>
+
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <h2 id="modal-title"></h2>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+<script>
+  var origSet = setPlatform;
+  setPlatform = function(p, btn) {
+    origSet(p, btn);
+    document.getElementById('ig-compare').style.display = p === 'ig' ? 'block' : 'none';
+    document.getElementById('yt-compare').style.display = p === 'yt' ? 'block' : 'none';
+  };
+</script>
+</body>
+</html>
