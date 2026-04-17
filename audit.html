@@ -1,213 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Get a free Instagram or YouTube profile audit from Social Fuel. No purchase required." />
-  <title>Free Audit — Social Fuel</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <style>
-    body { font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif; }
-    .audit-page { max-width: 960px; margin: 0 auto; padding: 72px 40px; }
-    .audit-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; margin-bottom: 56px; }
-    .audit-promise { background: var(--card); border: 1px solid var(--bdr); padding: 28px; border-radius: 4px; margin-top: 32px; transition: background 0.35s, border-color 0.35s; }
-    .audit-promise h3 { font-size: 14px; font-weight: 700; color: var(--gold); margin-bottom: 12px; letter-spacing: 0.05em; }
-    .audit-promise ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-    .audit-promise li { font-size: 13px; color: var(--gr); display: flex; gap: 10px; align-items: flex-start; line-height: 1.6; }
-    .audit-promise li::before { content: '✓'; color: var(--gold); flex-shrink: 0; font-weight: 700; }
-    .form-card { background: var(--card); border: 1px solid var(--bdr); padding: 36px; border-radius: 4px; transition: background 0.35s, border-color 0.35s; }
-    .form-card h2 { font-size: 22px; font-weight: 800; margin-bottom: 4px; color: var(--w); transition: color 0.35s; }
-    .form-card .sub { font-size: 13px; color: var(--gr); margin-top: 6px; margin-bottom: 24px; max-width: none; }
-    .testimonial { background: var(--bg2); border-left: 3px solid var(--gold); padding: 20px 24px; margin-top: 56px; border-radius: 0 4px 4px 0; transition: background 0.35s; }
-    .testimonial p { font-size: 15px; color: var(--gr); font-style: italic; line-height: 1.8; margin-bottom: 10px; }
-    .testimonial small { font-size: 11px; color: var(--gr2); letter-spacing: 0.08em; text-transform: uppercase; }
-    @media(max-width:768px){
-      .audit-page { padding: 48px 18px; }
-      .audit-intro { grid-template-columns: 1fr; gap: 36px; }
-      .form-card { padding: 24px 18px; }
-    }
-  </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="Get a free Instagram or YouTube profile audit from Inflorax. No purchase required. Delivered within 48 hours."/>
+<title>Free Audit — Inflorax</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
 </head>
-<body class="dk">
-
+<body>
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<div id="scroll-prog"></div>
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
 <nav>
-  <a class="logo" href="index.html">Social<span>Fuel</span></a>
-  <ul class="nav-links">
+  <a class="logo" href="index.html">Inflorax</a>
+  <ul class="nl">
     <li><a href="index.html#how">How it works</a></li>
     <li><a href="packages.html">Packages</a></li>
     <li><a href="audit.html">Free audit</a></li>
-    <li><a href="index.html#faq">FAQ</a></li>
+    <li><a href="index.html#faqsec">FAQ</a></li>
   </ul>
-  <div class="nav-right">
-    <button class="toggle" onclick="SF.toggleTheme()" title="Toggle theme" aria-label="Toggle theme">
-      <div class="toggle-knob" id="toggle-knob">🌙</div>
-    </button>
-    <a class="btn-gold nav-cta" href="packages.html">Get started</a>
-    <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
+  <div class="nr">
+    <button class="bg nbtn" onclick="window.location.href='packages.html'">Get started</button>
+    <button class="hm" onclick="tmenu()" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
-
-<div class="mobile-nav" id="mobile-nav">
-  <a href="index.html#how">How it works</a>
-  <a href="packages.html">Packages</a>
-  <a href="audit.html">Free audit</a>
-  <a href="index.html#faq">FAQ</a>
-  <a href="packages.html">Get started →</a>
+<div class="mn" id="mn">
+  <a href="index.html#how" onclick="cmenu()">How it works</a>
+  <a href="packages.html" onclick="cmenu()">Packages</a>
+  <a href="audit.html" onclick="cmenu()">Free audit</a>
+  <a href="index.html#faqsec" onclick="cmenu()">FAQ</a>
+  <a href="packages.html" onclick="cmenu()" style="color:var(--g);font-weight:700;border-bottom:none">Get started →</a>
 </div>
 
-<div class="audit-page">
-  <div class="tag" style="margin-bottom:14px">Free offer</div>
-  <h1 class="h1" style="margin-bottom:48px">Get your free<br><em>profile audit.</em></h1>
+<!-- Page hero -->
+<div style="background:var(--f);padding:100px 40px 48px;position:relative;overflow:hidden">
+  <div class="shb" style="opacity:0.1"></div>
+  <div class="tag fu reveal">Free offer</div>
+  <h1 class="h1 fu reveal" style="font-size:clamp(38px,6vw,72px)">Get your free<br><em>profile audit.</em></h1>
+  <p class="sub" style="color:var(--mu);margin-top:14px">No pitch. No pressure. Just real feedback on your account delivered within 48 hours.</p>
+</div>
 
-  <div class="audit-intro">
-    <!-- LEFT: WHAT YOU GET -->
-    <div>
-      <p style="color:var(--gr);font-size:16px;line-height:1.85;margin-bottom:14px">
-        We'll take a look at your Instagram or YouTube profile and send you a short, personalized breakdown within 48 hours.
-      </p>
-      <p style="color:var(--gr);font-size:16px;line-height:1.85;margin-bottom:0;font-style:italic">
-        No pitch. No pressure. Just real, honest feedback.
-      </p>
+<div class="sp"></div>
 
-      <div class="audit-promise">
-        <h3>What your audit covers</h3>
-        <ul>
-          <li>Profile first impression — does it make people want to follow?</li>
-          <li>Content positioning — is your niche clear and compelling?</li>
-          <li>Reach assessment — where your visibility likely breaks down</li>
-          <li>Posting habits — what's helping and what's hurting</li>
-          <li>Your single biggest opportunity right now</li>
-          <li>Whether a package would genuinely help — and which one</li>
-        </ul>
+<div id="audit" style="background:var(--m);padding:88px 40px">
+    <div class="tag fu reveal">Free offer</div>
+    <h2 class="h2 fu reveal">Not sure where to start?<br>Get a <em>free audit.</em></h2>
+    <div class="audit-box fu">
+      <div class="audit-left">
+        <p>We'll review your Instagram or YouTube profile and send you a short, personalized breakdown — what's working, what's not, and your single biggest opportunity right now.</p>
+        <p style="font-style:italic;font-size:14px;margin-bottom:0">No pitch. No pressure. Just real feedback.</p>
+        <div class="audit-badges" style="margin-top:22px">
+          <div class="audit-badge">Delivered within 48 hours</div>
+          <div class="audit-badge">No purchase required</div>
+          <div class="audit-badge">We never ask for your password</div>
+        </div>
       </div>
-
-      <div class="audit-badges" style="margin-top:24px">
-        <div class="audit-badge">Delivered within 48 hours</div>
-        <div class="audit-badge">No purchase required — ever</div>
-        <div class="audit-badge">We never ask for your password</div>
-        <div class="audit-badge">Available for Instagram &amp; YouTube</div>
-      </div>
-
-      <div class="testimonial">
-        <p>"The audit was genuinely useful — they pointed out things about my profile I'd never thought about. No hard sell, just clear feedback."</p>
-        <small>Creator, lifestyle niche — Instagram</small>
-      </div>
-    </div>
-
-    <!-- RIGHT: FORM -->
-    <div>
-      <div class="form-card" id="audit-form-card">
-        <h2>Request your audit</h2>
-        <p class="sub">Fill in a few details and we'll send your personalized breakdown within 48 hours.</p>
-
+      <div>
         <div id="audit-form-wrap" class="audit-form">
-          <div class="form-field">
-            <label>Full name</label>
-            <input type="text" id="audit-name" placeholder="Your name" autocomplete="name" />
-          </div>
-          <div class="form-field">
-            <label>Email address</label>
-            <input type="email" id="audit-email" placeholder="you@email.com" autocomplete="email" />
-          </div>
-          <div class="form-field">
-            <label>Username / profile link</label>
-            <input type="text" id="audit-user" placeholder="@handle or full profile URL" />
-          </div>
-          <div class="form-field">
-            <label>Platform</label>
-            <select id="audit-platform">
-              <option value="">Select platform</option>
-              <option>Instagram</option>
-              <option>YouTube</option>
-            </select>
-          </div>
-
-          <div class="form-section-label" style="margin-top:8px">Optional — helps us give better feedback</div>
-
-          <div class="form-field">
-            <label>What type of content do you post?</label>
-            <select>
-              <option value="">Select type</option>
-              <option>Reels / Shorts</option>
-              <option>Talking / Educational</option>
-              <option>Lifestyle / Daily</option>
-              <option>Fashion / Beauty</option>
-              <option>Comedy / Entertainment</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="form-field">
-            <label>How long have you been posting?</label>
-            <select>
-              <option value="">Select duration</option>
-              <option>Less than 1 month</option>
-              <option>1–3 months</option>
-              <option>3–6 months</option>
-              <option>6–12 months</option>
-              <option>More than 1 year</option>
-            </select>
-          </div>
-          <div class="form-field">
-            <label>Your biggest frustration right now</label>
-            <textarea id="audit-frustration" rows="3" placeholder="What's been the hardest part of growing? Be specific — it helps us give you better feedback."></textarea>
-          </div>
-
+          <div class="form-field"><label>Full name</label><input type="text" id="audit-name" placeholder="Your name"/></div>
+          <div class="form-field"><label>Email address</label><input type="email" id="audit-email" placeholder="you@email.com"/></div>
+          <div class="form-field"><label>Username / profile link</label><input type="text" id="audit-user" placeholder="@handle or profile URL"/></div>
+          <div class="form-field"><label>Platform</label><select id="audit-platform"><option value="">Select platform</option><option>Instagram</option><option>YouTube</option></select></div>
           <button class="form-submit" onclick="submitAudit()">Send my free audit →</button>
-          <p class="form-note" style="margin-top:10px">Free — no purchase required &nbsp;·&nbsp; We review within 48 hours</p>
+          <p class="form-note">Free — no purchase required · We review within 48 hours</p>
           <p class="form-safe">🔒 We never require your password or login access</p>
         </div>
-
         <div id="audit-thanks" class="thankyou" style="display:none">
           <div class="thankyou-icon">✓</div>
           <h3>You're on the list.</h3>
-          <p>We'll review your profile and send your personalized audit within 48 hours.</p>
-          <p style="margin-top:12px">While you wait — keep posting. Consistency is the single biggest factor in your results.</p>
-          <p style="margin-top:16px;font-size:11px;color:var(--gr2)">Questions? hello@socialfuel.com</p>
-          <a class="btn-gold" href="packages.html" style="display:inline-block;margin-top:24px">View packages →</a>
+          <p>We'll review your profile and send your audit within 48 hours.</p>
         </div>
       </div>
     </div>
   </div>
+
+<div class="sp"></div>
+
+<!-- CTA -->
+<div id="ctasec" style="text-align:center;padding:88px 40px;position:relative;overflow:hidden;background:var(--d)">
+  <div class="sb"><span class="pd2"></span>Ready to start now?</div>
+  <h2 class="ch2">Skip the audit.<br>Jump straight to <em>growth.</em></h2>
+  <div class="cs" style="font-size:16px;color:var(--mu);max-width:420px;margin:14px auto 0">Browse our packages and choose the tier that fits where you are right now.</div>
+  <div style="display:flex;justify-content:center;gap:12px;margin-top:32px;flex-wrap:wrap">
+    <a href="packages.html" class="bg" style="display:inline-block;padding:15px 44px;font-size:12px;text-decoration:none">View packages →</a>
+  </div>
+  <div style="margin-top:14px;font-size:11px;color:var(--fa)">No passwords required · Secure checkout via Stripe · Results depend on your content</div>
 </div>
 
-<div class="sep"></div>
-
-<section id="cta">
-  <div class="scarcity-badge"><span class="pulse-dot"></span>Ready to start now?</div>
-  <h2 class="cta-h2">Skip the audit — jump straight to <em>growth.</em></h2>
-  <div class="cta-sub">Browse our packages and choose the tier that fits where you are right now.</div>
-  <div class="cta-btns">
-    <a class="btn-inverse" href="packages.html">View packages</a>
-  </div>
-  <div class="cta-fine">No passwords required &nbsp;·&nbsp; Secure checkout via Stripe &nbsp;·&nbsp; Results depend on your content and consistency</div>
-</section>
+<div class="sp"></div>
 
 <footer>
-  <div class="footer-row">
-    <a class="footer-logo" href="index.html">Social<span>Fuel</span></a>
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="packages.html">Packages</a>
-      <a onclick="openLegal('terms')">Terms &amp; conditions</a>
-      <a onclick="openLegal('privacy')">Privacy policy</a>
-      <a onclick="openLegal('contact')">Contact</a>
+    <div class="fr">
+      <a class="fl" href="#sh">Inflorax</a>
+      <div class="fls">
+        <a href='packages.html'>Packages</a>
+        <a onclick="oL('terms')">Terms &amp; conditions</a>
+        <a onclick="oL('privacy')">Privacy policy</a>
+        <a onclick="oL('contact')">Contact</a>
+      </div>
     </div>
-  </div>
-  <small>© 2024 Social Fuel. All rights reserved. Results vary by account. We do not guarantee specific growth outcomes.</small>
-</footer>
+    <small>© 2025 Inflorax. All rights reserved. Results vary by account. We do not guarantee specific growth outcomes.</small>
+  </footer>
 
-<div class="modal-overlay" id="modal-overlay">
-  <div class="modal-box">
-    <button class="modal-close" onclick="closeModal()">×</button>
-    <h2 id="modal-title"></h2>
-    <div id="modal-body"></div>
-  </div>
-</div>
-
+<div class="mo" id="mo"><div class="mb"><button class="mc" onclick="cM()">×</button><h2 id="mt"></h2><div id="mb2"></div></div></div>
 <script src="main.js"></script>
 </body>
 </html>
